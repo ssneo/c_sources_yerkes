@@ -51,7 +51,7 @@ def run_c_sources( images=None, aperture_diameter_in_fwhm=None, se_files_loc=Non
 
         print (f"median_fwhm: {median_fwhm}, mean_fwhm: {mean_fwhm} ")
         #stop
-        aperture_setting = int( (3 * mean_fwhm) )
+        aperture_setting = int( (aperture_diameter_in_fwhm * mean_fwhm) )
         update_source_extractor_config( aperture_setting )
         print (f"aperture_setting: {aperture_setting}")
         #stop
