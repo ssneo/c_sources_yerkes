@@ -67,7 +67,7 @@ if __name__ == "__main__":
     folder_of_images = '/dap_data/review_files/75775/working/'
 
     parent_dir = os.path.dirname( folder_of_images )
-    se_files_loc = os.path.join( parent_dir, 'sources')
+    se_files_loc = os.path.join( parent_dir, 'source_extractor')
     #print ('se_files_loc', se_files_loc)
     #stop
     if os.path.exists( se_files_loc ) == False:
