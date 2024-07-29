@@ -64,7 +64,7 @@ if __name__ == "__main__":
     
 
     aperture_diameter_in_fwhm = 3
-    folder_of_images = '/dap_data/dylan_calimages'
+    folder_of_images = '/dap_data/dylan_calimages/'
 
     parent_dir = os.path.dirname( folder_of_images )
     se_files_loc = os.path.join( parent_dir, 'source_extractor')
@@ -78,6 +78,13 @@ if __name__ == "__main__":
     images = glob.glob( folder_of_images + "*/*.fits")
     images += glob.glob( folder_of_images + "*/*.fit")
     images += glob.glob( folder_of_images + "*/*.FIT")
+
+    print ('images', images)
+
+    for im in images:
+        parent_dir = os.path.dirname( im )
+        se_files_loc = os.path.join( parent_dir, 'source_extractor')
+    stop
 
 
     run_c_sources( images=images, aperture_diameter_in_fwhm=aperture_diameter_in_fwhm, se_files_loc=se_files_loc  )
