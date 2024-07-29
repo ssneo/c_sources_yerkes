@@ -83,6 +83,7 @@ if __name__ == "__main__":
 
     for im in images:
         parent_dir = os.path.dirname( im )
+        print ('parent_dir', parent_dir)
         se_files_loc = os.path.join( parent_dir, 'source_extractor')
     #stop
 
