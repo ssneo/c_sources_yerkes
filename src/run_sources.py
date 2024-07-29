@@ -70,8 +70,7 @@ if __name__ == "__main__":
     se_files_loc = os.path.join( parent_dir, 'source_extractor')
     #print ('se_files_loc', se_files_loc)
     #stop
-    if os.path.exists( se_files_loc ) == False:
-        os.mkdir( se_files_loc )
+    
 
     #get list of images:
 
@@ -85,6 +84,8 @@ if __name__ == "__main__":
         parent_dir = os.path.dirname( im )
         print ('parent_dir', parent_dir)
         se_files_loc = os.path.join( parent_dir, 'source_extractor')
+        if os.path.exists( se_files_loc ) == False:
+            os.mkdir( se_files_loc )
     #stop
 
 
