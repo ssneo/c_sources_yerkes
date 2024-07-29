@@ -79,12 +79,12 @@ if __name__ == "__main__":
     images += glob.glob( folder_of_images + "*/*.fit")
     images += glob.glob( folder_of_images + "*/*.FIT")
 
-    print ('images', images)
+    #print ('images', images)
 
     for im in images:
         parent_dir = os.path.dirname( im )
         se_files_loc = os.path.join( parent_dir, 'source_extractor')
-    stop
+    #stop
 
 
     run_c_sources( images=images, aperture_diameter_in_fwhm=aperture_diameter_in_fwhm, se_files_loc=se_files_loc  )
