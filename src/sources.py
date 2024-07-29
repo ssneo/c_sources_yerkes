@@ -15,7 +15,7 @@ from photutil_detection import source_detection
 from astropy.stats import sigma_clipped_stats
 
 
-from client_queue import client_queue
+#from client_queue import client_queue
 
 #try:
 #    logging.basicConfig( filename = '/container_c_log.log', level=logging.DEBUG)
