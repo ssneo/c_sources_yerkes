@@ -6,10 +6,10 @@ import shutil
 import sys
 from astropy.wcs import WCS
 from astropy import units as u
-import logging
+#import logging
 import time
 import socket
-import psycopg2
+#import psycopg2
 from datetime import datetime, timezone
 from photutil_detection import source_detection
 from astropy.stats import sigma_clipped_stats
@@ -17,10 +17,10 @@ from astropy.stats import sigma_clipped_stats
 
 from client_queue import client_queue
 
-try:
-    logging.basicConfig( filename = '/container_c_log.log', level=logging.DEBUG)
-except:
-    logging.basicConfig( filename = '/Users/linder/container_c_log.log', level=logging.DEBUG)
+#try:
+#    logging.basicConfig( filename = '/container_c_log.log', level=logging.DEBUG)
+#except:
+#    logging.basicConfig( filename = '/Users/linder/container_c_log.log', level=logging.DEBUG)
 
 
 def readInformationFromDatabase(msg): #confirm the psql line is correct
