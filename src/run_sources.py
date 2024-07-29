@@ -64,7 +64,7 @@ if __name__ == "__main__":
     
 
     aperture_diameter_in_fwhm = 3
-    folder_of_images = '/dap_data/review_files/75775/working/'
+    folder_of_images = '/dap_data/'
 
     parent_dir = os.path.dirname( folder_of_images )
     se_files_loc = os.path.join( parent_dir, 'source_extractor')
@@ -74,9 +74,12 @@ if __name__ == "__main__":
         os.mkdir( se_files_loc )
 
     #get list of images:
-    images = glob.glob( folder_of_images + "*.fits")
-    images += glob.glob( folder_of_images + "*.fit")
-    images += glob.glob( folder_of_images + "*.FIT")
+    images = glob.glob( folder_of_images + "*/*/*.fits")
+    images += glob.glob( folder_of_images + "*/*/*.fit")
+    images += glob.glob( folder_of_images + "*/*/*.FIT")
+    images += glob.glob( folder_of_images + "*/*.fits")
+    images += glob.glob( folder_of_images + "*/*.fit")
+    images += glob.glob( folder_of_images + "*/*.FIT")
 
 
     run_c_sources( images=images, aperture_diameter_in_fwhm=aperture_diameter_in_fwhm, se_files_loc=se_files_loc  )
